@@ -1,15 +1,13 @@
-version: '3'
+version: '3.9'
 
 services:
-  mysql-sx:
-    image: mysql:8.0
-    container_name: mysql-db
-    restart: always
-    platform: linux/amd64
-    environment:
-      MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: easy-shop
-      MYSQL_PASSWORD: root
+  postgres:
+    image: postgres:14-alpine
     ports:
-      - 3306:3306
-    mem_limit: 512m
+      - 5432:5432
+    volumes:
+      - ~/Documentos/volumes/postgresql:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_PASSWORD=rooter
+      - POSTGRES_USER=root
+      - POSTGRES_DB=easy-shop
