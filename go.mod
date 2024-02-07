@@ -4,6 +4,8 @@ go 1.21.5
 
 require (
 	github.com/go-chi/jwtauth v1.2.0
+	github.com/google/uuid v1.4.0
+	github.com/lib/pq v1.10.9
 	github.com/spf13/viper v1.18.2
 )
 

@@ -1,6 +1,10 @@
 package main
 
-import "easyshop-api/configs"
+import (
+	"easyshop-api/configs"
+
+	_ "github.com/lib/pq"
+)
 
 func main() {
 	_, err := configs.LoadConfig(".")
